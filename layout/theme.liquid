@@ -7,6 +7,10 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    <link rel="preload" href="https://cdn.shopify.com/s/files/1/0430/8982/1856/files/MasivaRegular.woff2?v=1643211781" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdn.shopify.com/s/files/1/0430/8982/1856/files/Masiva-Bold.woff2?v=1647984851" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdn.shopify.com/s/files/1/0430/8982/1856/files/HansonBold.woff2?v=1643211709" as="font" type="font/woff2" crossorigin>
+  
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -44,6 +48,22 @@
     %}
 
     {% style %}
+      @font-face {
+        font-family: 'Masiva';
+        src: url('https://cdn.shopify.com/s/files/1/0430/8982/1856/files/MasivaRegular.woff2?v=1643211781') format('woff2'), url('https://cdn.shopify.com/s/files/1/0430/8982/1856/files/MasivaRegular.woff?v=1643211781') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Masiva Bold';
+        src: url('https://cdn.shopify.com/s/files/1/0430/8982/1856/files/Masiva-Bold.woff2?v=1647984851') format('woff2'), url('https://cdn.shopify.com/s/files/1/0430/8982/1856/files/Masiva-Bold.woff?v=1647984784') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -96,17 +116,18 @@
       }
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-        --font-body-style: {{ settings.type_body_font.style }};
-        --font-body-weight: {{ settings.type_body_font.weight }};
-        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+        
+        --font-body-family: 'Masiva';
+        --font-body-style: normal;
+        --font-body-weight: 400;
+        --font-body-weight-bold: 700;
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
+        --font-heading-family: 'Masiva';
+        --font-heading-style: normal;
+        --font-heading-weight: 400;
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
-        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+        --font-heading-scale: {{ settings.heading_scale | times: 0.7 | divided_by: settings.body_scale }};
 
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
@@ -237,7 +258,7 @@
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        letter-spacing: 0.06rem;
+        letter-spacing: -0.05rem;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
