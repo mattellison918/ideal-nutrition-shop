@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+<link rel="stylesheet" href="{{ 'ideal-image-hero-1.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
 {%- if settings.cart_type == "drawer" -%}
   {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
   {{ 'component-cart.css' | asset_url | stylesheet_tag }}
@@ -119,7 +122,8 @@
     
     @media screen and (min-width: 750px) {
       body {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        letter-spacing: -0.05rem;
       }
     }
     
@@ -191,6 +195,86 @@
       font-size: 1.4rem;
     }
   }
+
+  h1 {
+    letter-spacing: -0.2rem;
+  }
+
+  .thumbnail {
+    width: 100px !important;
+    height: 140px !important;
+  }
+
+  @media screen and (min-width: 990px) {
+    .product--large:not(.product--no-media) .product__info-wrapper {
+      padding: 0 0 0 0 !important;
+    }
+  }
+
+  .product-media-container.constrain-height {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  
+  @media screen and (min-width: 990px) {
+    .header {
+        padding-top: 10px !important;
+        padding-bottom: 8px !important;
+    }
+  }
+
+  .badge:first-child {
+    padding-top: 7px !important;
+  }
+
+  btn--primary {
+    background-color: var(--colors_primary);
+    color: #fff;
+    border: 1px solid #000;
+}
+.btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 1.9rem 4.4rem;
+    border-radius: 3rem;
+    -webkit-transition: .3s;
+    transition: .3s;
+    line-height: 1;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.header-wrapper {
+  max-width: 1530px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumbnail-list {
+  height: 145px;
+}
+
+@media screen and (max-width: 749px) {
+  .product__media-list {
+    margin-bottom: 0px !important;
+  }
+
+  .slider-button {
+    height: 30px !important;
+  }
+}
+
 </style>
 
 {%- style -%}
