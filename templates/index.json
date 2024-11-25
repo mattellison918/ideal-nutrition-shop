@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "text_style": "body"
           }
         },
@@ -34,16 +34,45 @@
         "text",
         "button"
       ],
+      "disabled": true,
+      "custom_css": [
+        ".banner__box {background-color: rgba(0, 0, 0, 0.5);}"
+      ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/Group_Shots_2.jpg",
+        "image_overlay_opacity": 20,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-4",
+        "image_behavior": "fixed",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "ideal_image_hero_1_6UT4EU": {
+      "type": "ideal-image-hero-1",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_Shots_1_5ef837f3-7c74-4aa6-9c55-c9dad40530a8.jpg",
+        "vertical_size_desktop": 85,
+        "vertical_size_mobile": 45,
+        "image_margin": 0,
+        "image_border_radius": 0,
+        "background_color": "#f1eae1",
+        "foreground_color": "#796a56",
+        "button_hover_background": "#f8cb00",
+        "button_hover_foreground": "#5b5b5b",
+        "image_position": "left",
+        "image_focal_point": "top",
+        "text_vertical_alignment": "middle",
+        "preheading": "",
+        "heading": "Image Hero Heading",
+        "subheading": "",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>",
+        "button_label": "Check Our Our Products",
+        "button_link": "shopify:\/\/collections\/our-stuff"
       }
     },
     "rich_text": {
@@ -68,6 +97,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
@@ -79,15 +110,23 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
@@ -122,11 +161,13 @@
         "product",
         "collection-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -134,9 +175,11 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
+        "enable_video_looping": false,
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
@@ -201,6 +244,7 @@
   },
   "order": [
     "image_banner",
+    "ideal_image_hero_1_6UT4EU",
     "rich_text",
     "featured_collection",
     "collage",

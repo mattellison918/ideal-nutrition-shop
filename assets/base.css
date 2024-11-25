@@ -3692,3 +3692,11 @@ height: 160px;
 .thumbnail {
 height: 140px !important;
 }
+
+.header-wrapper {
+  max-width: unset;
+}
+
+.share-button__button {
+  font-family: var(--font-body-family);
+}
