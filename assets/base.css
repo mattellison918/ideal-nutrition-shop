@@ -3454,3 +3454,241 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+.menu-drawer-container {
+  display: flex;
+}
+
+.list-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-menu--inline {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+summary.list-menu__item {
+  padding-right: 2.7rem;
+}
+
+.list-menu__item {
+  display: flex;
+  align-items: center;
+  line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+
+.list-menu__item--link {
+  text-decoration: none;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
+
+@media screen and (min-width: 750px) {
+  .list-menu__item--link {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  
+
+  .card__heading {
+    font-size: 1.3rem;
+  }
+  .header__inline-menu {
+    margin-top: 10px;
+    margin-bottom: -5px;
+  }
+  .badge:first-child {
+    text-transform: uppercase;
+    padding-top: 18px;
+    letter-spacing: -0.03rem;
+  }
+  .announcement-bar__message {
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+  }
+  .button,
+  .button-label,
+  .shopify-challenge__button,
+  .customer button {
+    letter-spacing: -0.08px;
+  }
+  .product__title > * {
+    letter-spacing: -1.25px;
+  }
+  
+  .header__heading-logo {
+    height: auto;
+    width: 120px;
+  }
+  
+  .rte ul,
+  .rte ol {
+    padding-left: 1rem;
+  }
+  
+  .rich-text__text ul li strong {
+    margin-left: -0.25rem;
+  }
+  
+  @media screen and (min-width: 750px) {
+    body {
+      font-size: 1.6rem;
+      letter-spacing: -0.05rem;
+    }
+  }
+  
+  @media screen and (min-width: 990px) {
+    .header:not(.drawer-menu).page-width {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      margin: 0px 0px 0px 0px;
+      max-width: 100%;
+    }
+  }
+  
+  .list-menu li {
+    margin-left: 0.5rem;
+    margin-right: 0.75rem;
+  }
+  
+  @media screen and (min-width: 990px) {
+    .header--middle-left .header__inline-menu {
+      margin-left: 2.1rem;
+      margin-right: 2.1rem;
+    }
+  }
+  
+  .header__heading-link {
+    padding: 0px;
+  }
+  
+  @media screen and (min-width: 990px) {
+    .header {
+      padding-bottom: 8px;
+    }
+  }
+  
+  @media screen and (min-width: 990px) {
+    .header--middle-left {
+      column-gap: 6rem;
+    }
+  }
+  
+  @media screen and (min-width: 990px) {
+    .header:not(.drawer-menu).page-width {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 990px) {
+    body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
+      height: 33px;
+    }
+  }
+  
+  .list-menu--inline li a :hover,
+  .list-menu li :hover,
+  .header__menu-item :hover {
+    text-decoration: none;
+  }
+  
+  .product__description ul li .Apple-converted-space {
+    display: none;
+  }
+  
+  .badge:first-child {
+    padding-top: 6px;
+  }
+  
+  .announcement-bar__message span {
+    font-size: 1.4rem;
+  }
+}
+
+h1 {
+  letter-spacing: -0.2rem;
+}
+
+.thumbnail {
+  width: 100px !important;
+  height: 140px !important;
+}
+
+@media screen and (min-width: 990px) {
+  .product--large:not(.product--no-media) .product__info-wrapper {
+    padding: 0 0 0 0 !important;
+  }
+}
+
+.product-media-container.constrain-height {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+@media screen and (min-width: 990px) {
+  .header {
+      padding-top: 10px !important;
+      padding-bottom: 8px !important;
+  }
+}
+
+.badge:first-child {
+  padding-top: 7px !important;
+}
+
+btn--primary {
+  background-color: var(--colors_primary);
+  color: #fff;
+  border: 1px solid #000;
+}
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 1.9rem 4.4rem;
+  border-radius: 3rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  line-height: 1;
+}
+
+.btn {
+text-decoration: none;
+}
+
+.header-wrapper {
+max-width: 1530px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.thumbnail-list {
+height: 160px;
+}
+
+@media screen and (max-width: 749px) {
+.product__media-list {
+  margin-bottom: 0px !important;
+}
+
+.slider-button {
+  height: 30px !important;
+}
+}
+
+.thumbnail {
+height: 140px !important;
+}
